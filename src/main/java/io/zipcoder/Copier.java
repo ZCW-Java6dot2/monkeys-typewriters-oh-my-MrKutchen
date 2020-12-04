@@ -8,7 +8,7 @@ import java.util.Iterator;
  */
 public abstract class Copier implements Runnable {
     // We use an iterator so each monkey / thread can copy an individual word.
-    public Iterator<String> stringIterator;
+    public final Iterator<String> stringIterator;
     public String copied;
 
     public Copier(String toCopy) {
